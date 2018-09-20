@@ -1,0 +1,21 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "A proxy server for soundcloud mock",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon index.js"
+  },
+  "author": "Trey Pernell",
+  "license": "ISC",
+  "devDependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "dependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
