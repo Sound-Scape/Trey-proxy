@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <header>
-    <link rel='stylesheet' href='http://localhost:3003/dist/bundle.css'/>
-    
+    <link rel='stylesheet' href='http://localhost:3000/styles.css' />
+    <link rel='stylesheet' href='https://s3.us-east-2.amazonaws.com/waveformplayercss/bundle.css'/>
+    <link rel='stylesheet' href='http://localhost:3002/style.css'/> 
   </header>
   <head>
     <meta charset="UTF-8">
@@ -10,12 +11,17 @@
   </head>
   <body>
     <div id='modal'></div>
-    <div id='waveform-player'></div>
-    <div id='related-lists'></div>
-    <div id='social-area'></div>
-    <div id='comment-app'></div>
+    <div id='modal-root'></div>
+    <img src="NavBar.png" id='nav-bar'>
+    <div id='app-wrapper'>
+      <div id='waveform-player'></div>
+      <div id='related-lists'></div>
+      <div id='social-area'></div>
+      <div id='comment-app'></div>
+    </div>
     <script src='http://localhost:3001/bundle.js'></script>
-    <script src='http://localhost:3003/dist/bundle.js'></script>
+    <script src='http://localhost:3002/dist/bundle.js'></script>
+    <script src=https://s3.us-east-2.amazonaws.com/waveformplayer/bundle.js></script>
     <script src='http://localhost:3004/bundle.js'></script>
   </body>
 </html>
