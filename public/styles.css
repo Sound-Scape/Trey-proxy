@@ -21,3 +21,7 @@ body {
   height: 50px;
   z-index: 1001;
 }
+
+.comment-app-wrapper {
+  text-align: left;
+}

@@ -33,7 +33,6 @@ app.get('/relatedtracks/:id', (req, res) => {
  const songId = req.params.id;
  axios.get(`http://localhost:3002/relatedTracks/${songId}`)
    .then(({ data }) => {
-     console.log('Related Tracks', data);
      res.json(data);
    })
    .catch((error) => {
@@ -42,14 +41,24 @@ app.get('/relatedtracks/:id', (req, res) => {
 });
 
 app.get('/relatedalbums/:id', (req, res) => {
-  console.log('made it to rel. albums')
  const songId = req.params.id;
  axios.get(`http://localhost:3002/relatedAlbums/${songId}`)
    .then(({ data }) => {
-     console.log('Related Albums', data);
      res.json(data);
    })
    .catch((error) => {
      console.log(error);
    });
+});
+
+app.get('/comments/:songid', (req, res) => {
+  console.log('made it here')
+ // console.log(`http:/localhost:3001/api/${req.params.songid}`);
+ axios.get(`http://localhost:3001/api/${req.params.songid}`)
+  .then(function (response) {
+   res.send(response.data);
+  })
+  .catch(function (error) {
+   console.log(error);
+  });
 });
