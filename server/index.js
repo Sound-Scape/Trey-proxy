@@ -18,6 +18,16 @@ app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`);
 });
 
+app.get('/api/stats/:id', (req, res) =>{
+  axios.get(`http://localhost:3004/api/stats/${req.params.id}`)
+  .then(({ data }) => {
+    res.json(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+})
+
 app.get('/relatedtracks/:id', (req, res) => {
   console.log('made it to rel. id')
  const songId = req.params.id;
