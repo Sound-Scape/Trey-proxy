@@ -6,9 +6,10 @@ const port = process.env.PORT || 3000;
 const cors = require('cors');
 const axios = require('axios');
 const routes = require('./routes.js');
+const compression = require('compression');
 
 app.use(cors());
-
+app.use(compression());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/songs/:id', express.static(path.join(__dirname, '../public')));
