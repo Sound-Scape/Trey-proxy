@@ -6,7 +6,6 @@ const port = process.env.PORT || 3000;
 const cors = require('cors');
 const axios = require('axios');
 const routes = require('./routes.js');
-const compression = require('compression');
 
 app.use(cors());
 app.use(morgan('dev'));

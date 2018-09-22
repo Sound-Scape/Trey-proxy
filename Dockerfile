@@ -6,8 +6,6 @@ WORKDIR /src/app
 
 COPY . /src/app
 
-ENV NODE_ENV production
-
 RUN npm install
 
 EXPOSE 3000
