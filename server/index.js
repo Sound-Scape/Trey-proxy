@@ -31,7 +31,7 @@ app.get('/api/stats/:id', (req, res) =>{
 app.get('/relatedtracks/:id', (req, res) => {
   console.log('made it to rel. id')
  const songId = req.params.id;
- axios.get(`http://localhost:3002/relatedTracks/${songId}`)
+ axios.get(`http://18.219.127.175/relatedTracks/${songId}`)
    .then(({ data }) => {
      res.json(data);
    })
@@ -42,7 +42,7 @@ app.get('/relatedtracks/:id', (req, res) => {
 
 app.get('/relatedalbums/:id', (req, res) => {
  const songId = req.params.id;
- axios.get(`http://localhost:3002/relatedAlbums/${songId}`)
+ axios.get(`http://18.219.127.175/relatedAlbums/${songId}`)
    .then(({ data }) => {
      res.json(data);
    })
