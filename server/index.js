@@ -24,7 +24,7 @@ app.get('/api/stats/:id', (req, res) =>{
     res.json(data);
   })
   .catch((error) => {
-    console.log(error);
+    // console.log(error);
   })
 })
 
@@ -36,7 +36,7 @@ app.get('/relatedtracks/:id', (req, res) => {
      res.json(data);
    })
    .catch((error) => {
-     console.log(error);
+     console.log(error.slice(35));
    });
 });
 
@@ -47,7 +47,7 @@ app.get('/relatedalbums/:id', (req, res) => {
      res.json(data);
    })
    .catch((error) => {
-     console.log(error);
+     console.log(error.slice(35));
    });
 });
 
@@ -59,6 +59,6 @@ app.get('/comments/:songid', (req, res) => {
    res.send(response.data);
   })
   .catch(function (error) {
-   console.log(error);
+   // console.log(error);
   });
 });
