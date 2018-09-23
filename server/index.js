@@ -18,7 +18,7 @@ app.listen(port, () => {
 });
 
 app.get('/api/stats/:id', (req, res) =>{
-  axios.get(`http://localhost:3004/api/stats/${req.params.id}`)
+  axios.get(`http://server-env-1.phjpybupp3.us-west-1.elasticbeanstalk.com/api/stats/${req.params.id}`)
   .then(({ data }) => {
     res.json(data);
   })
@@ -50,14 +50,14 @@ app.get('/relatedalbums/:id', (req, res) => {
    });
 });
 
-app.get('/comments/:songid', (req, res) => {
-  console.log('made it here')
- // console.log(`http:/localhost:3001/api/${req.params.songid}`);
- axios.get(`http://localhost:3001/api/${req.params.songid}`)
-  .then(function (response) {
-   res.send(response.data);
-  })
-  .catch(function (error) {
-   // console.log(error);
-  });
-});
+// app.get('/comments/:songid', (req, res) => {
+//   console.log('made it here')
+//  // console.log(`http:/localhost:3001/api/${req.params.songid}`);
+//    axios.get(`http://comments-server.2u82f9p8mx.us-east-2.elasticbeanstalk.com/api/${req.params.songid}`)
+//   .then(function (response) {
+//    res.send(response.data);
+//   })
+//   .catch(function (error) {
+//    // console.log(error);
+//   });
+// });
